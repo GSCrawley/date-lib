@@ -1,4 +1,5 @@
 # FEW 2.1 - Date Library
+
 ## Description
 Dates are super important. You'll use them often. The goal of this assignment is to create a library that handles date operations in a better and more intuitive way than the built in Date Object.
 
@@ -61,7 +62,8 @@ Read about getters here:
 
 https://javascript.info/property-accessors
 https://coryrylan.com/blog/javascript-es6-class-syntax
-Challenge 3
+
+## Challenge 3
 
 You need a format method that takes a "mask" string. The mask will contain formatting characters which displays various date elements, other characters are displayed unchanged.
 
@@ -100,7 +102,10 @@ In the example above y is replaced with short year, and the '/' is printed. The 
 Take a look at how moment JS handles date andf time formatting:
 
 https://momentjs.com/docs/#/parsing/string-format/
-Stretch goal - It would be good if we could support more features here. Formatting dates is a very common task. There are a few things missing from the list above.
+
+### Stretch goal
+
+It would be good if we could support more features here. Formatting dates is a very common task. There are a few things missing from the list above.
 
 Each of the things below need a character to represent them.
 
@@ -108,7 +113,8 @@ day of the week
 day of week full - Monday, Tuesday, Wednesday...
 day of the week short - Mon, Tue, Wed...
 The ordinal suffix. This is the st, th that follows a number. For example, 1st, 2nd, 3rd, 4th, 5th 6th, 7th, 8th 9th etc.
-Challenge 4
+
+## Challenge 4
 
 Make a when() this should return a human readble description of 'when' a date will occur.
 
@@ -129,7 +135,8 @@ console.log(d.when()) // today
 Take a look at how moment.js handles this:
 
 https://momentjs.com/docs/#/displaying/fromnow/
-Stretch Challenge
+
+### Stretch Challenge
 
 Look for edge cases in the when() method. When does it not work?
 
@@ -145,7 +152,8 @@ Make when() work for time hours minutes, seconds.
 11 mins ago
 23 seconds from now
 52 seconds ago
-Stretch Challenge
+
+### Stretch Challenge
 
 Take the challenge above one step further by including both date and time. This is an open ended challenge you can make it as detailed as you care to take it. Feel free to interprept the challenge and make your best judgement as to how it can be implemented.
 
@@ -156,7 +164,8 @@ Here is some sample output:
 1 year 4 months 23 days ago
 3 hours and 24 minutes from now
 etc.
-Challenge 5
+
+## Challenge 5
 
 Document your date lib. Do this by writing JS Doc string comments describing each method.
 
@@ -178,15 +187,16 @@ function hello() {
 }
 JS Doc comments begin with
 
-Challenge 6
+## Challenge 6
 
-Publish your date lib to npm. Include the following badges in your readme.md:
+Publish your date lib to npm. Include the following badges in your readme.md
 
 npm version
 license
 size
 GitHub Issues
-Challenge 7
+
+## Challenge 7
 
 Add continuous integration. Use Travis-ci and Coveralls.
 
@@ -194,18 +204,19 @@ Add badges for:
 
 Build
 Coverage
-Challenge 8
+
+## Challenge 8
 
 Use Rollup to bundle your date lib. Include both umd and esm bundles.
 
-Stretch Challenge
+### Stretch Challenge
 
 Use .toPrimitive() to allow your Data object to return a String or Number depending on context.
 
 https://javascript.info/object-toprimitive
 
-Deliverable
+### Deliverable
 After completing the challenges above post a link to your npm package on npm.
 
-Due date
+### Due date
 Class 6 - Nov 12
