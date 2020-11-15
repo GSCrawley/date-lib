@@ -25,23 +25,26 @@ class DL {
     return this.months[monthIn]
     }
   
-  get shortMonth() {
-    const monthIn = this.date.getMonth().toString.slice(3)
-    return this.shortMonth[monthIn]
-  }
+  // get shortMonth() {
+  //   const monthIn = this.date.getMonth().toString.slice(3)
+  //   return this.shortMonth[monthIn]
+  // } this aint workin
 
   get day() {
       return this.date.getDate()
     }
   
+  get hours() {
+      return this.date.getHours()
+    }
 
    
   }
 
-    const d = new DL(1973,8,15)
+    const d = new DL(1973,8,15,11,25,17)
     console.log(d.year)
     console.log(d.shortYear) 
     console.log(d.month)
     console.log(d.shortMonth)
     console.log(d.day)
-    
+    console.log(d.hours)
