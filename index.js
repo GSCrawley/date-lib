@@ -24,8 +24,17 @@ class DL {
     const monthIn = this.date.getMonth();
     return this.months[monthIn]
     }
-   
-    
+  
+  get shortMonth() {
+    const monthIn = this.date.getMonth().toString.slice(3)
+    return this.shortMonth[monthIn]
+  }
+
+  get day() {
+      return this.date.getDate()
+    }
+  
+
    
   }
 
@@ -33,7 +42,6 @@ class DL {
     console.log(d.year)
     console.log(d.shortYear) 
     console.log(d.month)
-    // console.log(d)
-    // console.log(d.year)
-    // console.log(e)
-    // console.log(d.month(1))
+    console.log(d.shortMonth)
+    console.log(d.day)
+    
