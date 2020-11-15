@@ -20,17 +20,15 @@ class DL {
     return this.date.getFullYear().toString().slice(2)
     }
 
-}
-const d = new DL(1973,8,15)
-  console.log(d.year)
-  console.log(d.shortYear)
-
-    // get month() {
-    //     this.monthMap = [{1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}]
-    //     const month = this.monthMap[this.date.getMonth()];
-    //     return month;
-    //     }
-    
+  get month() {
+    this.monthMap = [{1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}]
+    const month = this.monthMap[this.date.getMonth()];
+    return month;
+    }
+  } 
+    const d = new DL(1973,8,15)
+    console.log(d.year)
+    console.log(d.shortYear) 
     //     shortMonth() {
     //         const month = this.month();
     //         return month.slice(0, 3);
