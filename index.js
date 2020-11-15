@@ -41,7 +41,10 @@ class DL {
   get mins() {
       return this.date.getMinutes()
     }
-   
+  
+  get secs() {
+      return this.date.getSeconds()
+    }
   }
 
     const d = new DL(1973,8,15,11,25,17)
@@ -52,3 +55,4 @@ class DL {
     console.log(d.day)
     console.log(d.hours)
     console.log(d.mins)
+    console.log(d.secs)
