@@ -37,7 +37,10 @@ class DL {
   get hours() {
       return this.date.getHours()
     }
-
+  
+  get mins() {
+      return this.date.getMinutes()
+    }
    
   }
 
@@ -48,3 +51,4 @@ class DL {
     console.log(d.shortMonth)
     console.log(d.day)
     console.log(d.hours)
+    console.log(d.mins)
