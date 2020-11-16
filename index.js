@@ -7,7 +7,7 @@ class DL {
       'January', 'February', 'March', 'April','May', 'June', 'July', 'August', 'September',
       'October', 'November', 'December'
     ]
-    this.monthShrt = [
+    this.mnthShrt = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ]
   }
@@ -25,10 +25,10 @@ class DL {
     return this.months[monthIn]
     }
   
-  // get monthShrt() {
-  //   const monthIndex = this.date.getMonth() //get the month index
-  //   return this.mnthShrt[monthIndex]
-  // }
+  get monthShrt() {
+    const monthIn = this.date.getMonth() //get the month index
+    return this.mnthShrt[monthIn]
+  }
 
   get day() {
       return this.date.getDate()
