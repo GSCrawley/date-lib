@@ -46,6 +46,38 @@ class DL {
       return this.date.getSeconds()
     }
   
+    get day_padded() {
+      const day = this.day
+      if (day < 10) {
+        return '0' + day.toString() 
+      } else {
+        return day
+      } 
+    }
+
+    get hours_padded() {
+      if (this.hours < 10) {
+        return '0' + this.hours.toString()
+      } else {
+        return this.hours
+      }
+    }
+
+    get mins_padded() {
+      if (this.mins < 10) {
+        return '0' + this.mins.toString()
+      } else {
+        return this.mins
+      }
+    }
+
+    get secs_padded() {
+      if (this.secs < 10) {
+        return '0' + this.secs.toString()
+      } else {
+        return this.secs
+      }
+    }
 
   format(str=null) {
     const unmask = {
