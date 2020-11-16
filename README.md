@@ -4,7 +4,6 @@
 
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@gscrawley/date-lib)
 
-![GitHub issues](https://img.shields.io/github/issues/GSCrawley/date-lib)
 
 
 
