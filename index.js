@@ -46,7 +46,7 @@ class DL {
       return this.date.getSeconds()
     }
   
-    get day_padded() {
+    get day_pad() {
       const day = this.day
       if (day < 10) {
         return '0' + day.toString() 
@@ -55,7 +55,7 @@ class DL {
       } 
     }
 
-    get hours_padded() {
+    get hours_pad() {
       if (this.hours < 10) {
         return '0' + this.hours.toString()
       } else {
@@ -63,7 +63,7 @@ class DL {
       }
     }
 
-    get mins_padded() {
+    get mins_pad() {
       if (this.mins < 10) {
         return '0' + this.mins.toString()
       } else {
@@ -71,7 +71,7 @@ class DL {
       }
     }
 
-    get secs_padded() {
+    get secs_pad() {
       if (this.secs < 10) {
         return '0' + this.secs.toString()
       } else {
@@ -84,10 +84,15 @@ class DL {
       'Y': this.year,
       'y': this.shortYear,
       'M': this.month,
-      'D': this.day,
-      'H': this.hours,
-      'm': this.mins,
-      'S': this.secs
+      'm': this.monthShrt,
+      'D': this.day_pad,
+      'd': this.day,
+      'H': this.hours_pad,
+      'h': this.hours,
+      'i': this.mins_pad,
+      'I': this.mins,
+      'S': this.secs_pad,
+      's': this.secs
   }
 
   if (str == null) {
@@ -177,7 +182,7 @@ when() {
 }
 
 
-    const d = new DL(1973,8,15,11,25,17)
+    const d = new DL(1973,8,15,11,7,9)
     console.log(d.year)
     console.log(d.shortYear) 
     console.log(d.month)
@@ -186,3 +191,7 @@ when() {
     console.log(d.hours)
     console.log(d.mins)
     console.log(d.secs)
+
+    console.log(d.format('y/m/D'))
+    console.log(d.format('Y/M/D'))
+    console.log(d.format('Y/m/D/H/i/S'))
