@@ -6,6 +6,5 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/GSCrawley/date-lib)
 
-![GitHub](https://img.shields.io/github/license/GSCrawley/date-lib?logo=MIT)
 
 
