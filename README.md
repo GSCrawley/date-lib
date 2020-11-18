@@ -6,5 +6,4 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/GSCrawley/date-lib)
 
-
-
+![Jest](https://img.shields.io/Jest/testing/GSCrawley/date-lib)

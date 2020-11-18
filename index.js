@@ -10,6 +10,7 @@ class DL {
     this.mnthShrt = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ]
+    
   }
 
   get year() {
@@ -181,17 +182,24 @@ when() {
 }
 }
 
+module.exports = DL
 
-    const d = new DL(1973,8,15,11,7,9)
-    console.log(d.year)
-    console.log(d.shortYear) 
-    console.log(d.month)
-    console.log(d.monthShrt)
-    console.log(d.day)
-    console.log(d.hours)
-    console.log(d.mins)
-    console.log(d.secs)
+const bday = new DL(1973,7,15,11,7,9)
+console.log(bday)
+console.log(bday.year)
 
-    console.log(d.format('y/m/D'))
-    console.log(d.format('Y/M/D'))
-    console.log(d.format('Y/m/D/H/i/S'))
+// const f = d.format('Y/M/D')
+// console.log(f)
+
+//     console.log(d.year)
+//     console.log(d.shortYear) 
+//     console.log(d.month)
+//     console.log(d.monthShrt)
+//     console.log(d.day)
+//     console.log(d.hours)
+//     console.log(d.mins)
+//     console.log(d.secs)
+
+//     console.log(d.format('y/m/D'))
+//     console.log(d.format('Y/M/D'))
+//     console.log(d.format('Y/m/D/H/i/S'))
