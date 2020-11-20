@@ -1,85 +1,80 @@
-const { format } = require("path");
+import { format } from 'path';
 
 class DL {
   constructor(...args) {
-    this.date = new Date(...args)
+    this.date = new Date(...args);
     this.months = [
-      'January', 'February', 'March', 'April','May', 'June', 'July', 'August', 'September',
-      'October', 'November', 'December'
-    ]
+      'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+      'October', 'November', 'December',
+    ];
     this.mnthShrt = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
     ]
-    
   }
 
   get year() {
     return this.date.getFullYear();
-      }
-    
+  }
+
   get shortYear() {
-    return this.date.getFullYear().toString().slice(2)
-    }
+    return this.date.getFullYear().toString().slice(2);
+  }
 
   get month() {
     const monthIn = this.date.getMonth();
     return this.months[monthIn]
-    }
-  
+  }
+
   get monthShrt() {
-    const monthIn = this.date.getMonth() //get the month index
-    return this.mnthShrt[monthIn]
+    const monthIn = this.date.getMonth(); // get the month index
+    return this.mnthShrt[monthIn];
   }
 
   get day() {
-      return this.date.getDate()
-    }
-  
+    return this.date.getDate();
+  }
+
   get hours() {
-      return this.date.getHours()
-    }
-  
+    return this.date.getHours();
+  }
+
   get mins() {
-      return this.date.getMinutes()
-    }
-  
+    return this.date.getMinutes();
+  }
+
   get secs() {
-      return this.date.getSeconds()
+    return this.date.getSeconds();
+  }
+
+  get dayPad() {
+    const { day } = this;
+    if (day < 10) {
+      return `0${day.toString()}`;
     }
+    return day;
+  }
+
+  get hoursPad() {
+    if (this.hours < 10) {
+      return `0${this.hours.toString()}`;
+    }
+    return this.hours;
+  }
+
+  get minsPad() {
+    if (this.mins < 10) {
+      return `0${this.mins.toString()}`;
+    }
+    return this.mins;
+  }
+
+  get secsPad() {
+    if (this.secs < 10) {
+      return `0${this.secs.toString()}`;
+    } 
+    return this.secs
+  }
   
-    get day_pad() {
-      const day = this.day
-      if (day < 10) {
-        return '0' + day.toString() 
-      } else {
-        return day
-      } 
-    }
-
-    get hours_pad() {
-      if (this.hours < 10) {
-        return '0' + this.hours.toString()
-      } else {
-        return this.hours
-      }
-    }
-
-    get mins_pad() {
-      if (this.mins < 10) {
-        return '0' + this.mins.toString()
-      } else {
-        return this.mins
-      }
-    }
-
-    get secs_pad() {
-      if (this.secs < 10) {
-        return '0' + this.secs.toString()
-      } else {
-        return this.secs
-      }
-    }
-
   format(str=null) {
     const unmask = {
       'Y': this.year,
@@ -94,12 +89,12 @@ class DL {
       'I': this.mins,
       'S': this.secs_pad,
       's': this.secs
-  }
+    }
 
-  if (str == null) {
-    return `${unmask['Y']} ${unmask['M']} ${unmask['D']}`
-  }
-
+    if (str == null) {
+      return `${unmask['Y']} ${unmask['M']} ${unmask['D']}`
+    }
+  
   let result = ''
   //loop over the string and 
   for (let i=0; i < str.length; i++) {
@@ -180,14 +175,13 @@ when() {
   diff /= 12
   return `${Math.abs(diff).toFixed(0)} year` + (Math.abs(diff) < 1.5 ? ' ': 's ') + (diff < 0 ? `from now`: `ago`)
 }
-}
 
-module.exports = DL
+export default DL
 
-const bday = new DL(1973,7,15,11,7,9)
-console.log(bday)
-console.log(bday.year)
-
+// const bday = new DL(1973,7,15,11,7,9)
+// console.log(bday)
+// console.log(bday.year)
+  
 // const f = d.format('Y/M/D')
 // console.log(f)
 
