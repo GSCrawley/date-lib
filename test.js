@@ -1,4 +1,4 @@
-const DL = require('./index.js')
+const DL = require('./src/index.js')
 const bday = new DL(1973, 7, 7, 3, 9, 5)
 const date_test = bday
 
