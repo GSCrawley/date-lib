@@ -3,6 +3,6 @@ export default {
   output: {
     file: 'umd/date-lib.js',
     format: 'umd',
-    name: 'DL',
+    name: 'date-lib',
   },
 };

@@ -9,7 +9,7 @@ class DL {
     ];
     this.mnthShrt = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-    ]
+    ];
   }
 
   get year() {
@@ -165,16 +165,17 @@ class DL {
       return `a month ${diff < 0 ? 'from now' : 'ago'}`;
     }
 
-  //calculate months
-  diff /= 30
-  if (Math.abs(diff) >= 1.4 && Math.abs(diff) <= 10.5) {
-    return `${Math.abs(diff).toFixed(0)} months ` + (diff < 0 ? `from now`: `ago`)
-  }
+    // calculate months
 
-  // year
-  diff /= 12
-  return `${Math.abs(diff).toFixed(0)} year` + (Math.abs(diff) < 1.5 ? ' ': 's ') + (diff < 0 ? `from now`: `ago`)
-} 
+    diff /= 30;
+    if (Math.abs(diff) >= 1.4 && Math.abs(diff) <= 10.5) {
+      return `${Math.abs(diff).toFixed(0)} months ${diff < 0 ? 'from now' : 'ago'}`;
+    }
+    // year
+
+    diff /= 12;
+    return `${Math.abs(diff).toFixed(0)} year${  Math.abs(diff) < 1.5 ? ' ': 's '  }${diff < 0 ? `from now`: `ago`}`
+  }
 }
 
 export default DL;
